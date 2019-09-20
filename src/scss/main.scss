@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import 'material-color';
+@import 'reset';
+@import 'variables';
+@import 'buttons';
+
+/*********************************************
+Base Styles
+**********************************************/
+body {
+  cursor: url('../cursor.cur'), auto;
+  // font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
+  overflow-x: hidden;
+}
+
+* img {
+  display: block;
+  line-height: 0;
+  // max-width: 100%;
+}
+
+button {
+  a {
+    color: $lightgrey1;
+  }
+
+  a:hover {
+    color: $secondary;
+  }
+}
+
+/*********************************************
+Navigation
+**********************************************/
+.nav {
+  background: $primary;
+  border-bottom: $secondary 3px solid;
+  opacity: 0.9;
+  //padding y / padding x
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  .nav-inner-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    //padding y / padding x
+    padding: 0 1.25rem;
+
+    .site-title img {
+      padding: 0;
+      display: block;
+    }
+
+    .menu {
+      display: flex;
+      padding: 0;
+      margin: 0;
+
+      li {
+        /* horizontal space between menu items */
+        margin-left: 1rem;
+      }
+
+      a {
+        color: $lightgrey1;
+      }
+
+      a:hover {
+        color: $secondary;
+      }
+    }
+  }
+}
+
+/***********************
+home
+************************/
+.home-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.99)), url(../img/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  // background-size: 100%;
+  min-height: 100vh;
+  color: $light;
+
+  .home-inner {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding-top: 270px;
+
+    h1 {
+      font-size: 4.5rem;
+
+      strong {
+        color: $secondary;
+      }
+    }
+  }
+}
+
+/***********************
+music
+************************/
+.music-head-section {
+  background: $primary;
+  padding: 100px;
+
+  .music-head-inner {
+    color: $light;
+    text-align: center;
+
+    h2 {
+      font-size: 4.5rem;
+    }
+
+    button {
+      margin-top: 25px;
+    }
+  }
+}
+
+/*********************************************
+index.html - features-2up-areas
+**********************************************/
+.features-2up-areas {
+  //use for outher margins or full element color
+  //background: white;
+}
+
+.features-2up-areas h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.features-2up-areas-inner-wrap {
+  /* background: white; */
+  max-width: 1200px;
+  margin: auto;
+  padding: 1.25rem;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    'img1 txt2'
+    'txt4 img3';
+}
+
+.img1 {
+  grid-area: img1;
+}
+
+.txt2 {
+  grid-area: txt2;
+}
+
+.img3 {
+  grid-area: img3;
+}
+
+.txt4 {
+  grid-area: txt4;
+}
+
+/*********************************************
+footer
+**********************************************/
+footer {
+  background: $dark;
+  padding: 5rem;
+  margin-top: 40px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 50% auto;
+}
+
+.footer-logo {
+  margin-right: 10px;
+}

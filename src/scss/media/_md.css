@@ -1,0 +1,106 @@
+/* Medium devices (tablets, 900px and down) */
+
+/*********************************************
+Navigation
+**********************************************/
+.nav {
+  /* padding y */
+  padding: 2.5rem;
+}
+
+.nav-inner-wrap {
+  display: flex;
+  /* Stacks logo + menu items on small screens */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  margin: auto;
+}
+
+.site-title img {
+margin-bottom: 20px;
+}
+
+/*********************************************
+Headings
+**********************************************/
+
+h2 {
+text-align: center;
+}
+
+/*********************************************
+index.html - features-2up
+**********************************************/
+.features-2up-columns {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 40px;
+}
+
+/*********************************************
+index.html - features-2up-areas
+**********************************************/
+.features-2up-areas-inner-wrap {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    'img1'
+    'txt2'
+    'img3'
+    'txt4';
+}
+
+/*********************************************
+index.html - features-3up-areas
+**********************************************/
+.features-3up-areas-inner-wrap {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    'img1'
+    'txt2'
+    'img3';
+}
+/*********************************************
+index.html - features-4up
+**********************************************/
+.features-4up-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+/*********************************************
+footer
+**********************************************/
+footer {
+  padding: 0.5rem;
+}
+
+.footer-inner {
+  max-width: 400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.footer-logo {
+  display: grid;
+  place-items: center;
+  /* text-align: center; */
+  /* display: flex;
+  justify-content: center; */
+  padding: 2.5rem;
+}
+
+.footer-logo img {
+  width: 85%;
+  /* margin: 0; */
+}
+
+.button {
+  text-align: center;
+}

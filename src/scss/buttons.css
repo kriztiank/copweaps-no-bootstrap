@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+:root {
+  --yellow: rgb(255, 185, 20);
+  --yellow-hover: rgba(255, 185, 20, 0.8);
+  --blue-dark: rgb(27, 117, 188);
+  --blue-light: rgb(149, 189, 209);
+  --red-light: #e54b4b;
+  --green-light: #6c6;
+}
+
+body {
+  color: #fff;
+}
+
+/* Button placement */
+.button {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  /* Default button styles removed */
+  all: unset;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-yellow {
+  background: var(--yellow);
+}
+
+.btn-yellow:hover {
+  background: var(--yellow-hover);
+}
+
+.btn-blue {
+  background: var(--blue-dark);
+}
+
+.btn-blue:hover {
+  background: var(--blue-light);
+}
+
+.btn-red-light {
+  background: var(--red-light);
+}
+
+.btn-green-light {
+  background: var(--green-light);
+}
