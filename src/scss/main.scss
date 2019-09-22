@@ -21,16 +21,6 @@ body {
   // max-width: 100%;
 }
 
-button {
-  a {
-    color: $lightgrey1;
-  }
-
-  a:hover {
-    color: $secondary;
-  }
-}
-
 /*********************************************
 Navigation
 **********************************************/
@@ -123,7 +113,7 @@ music
       font-size: 4.5rem;
     }
 
-    button {
+    .button {
       margin-top: 25px;
     }
   }

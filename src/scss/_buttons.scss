@@ -1,14 +1,24 @@
-// .btn {
-//   border: 2px solid black;
-//   background-color: white;
-//   color: black;
-//   padding: 14px 28px;
-//   font-size: 16px;
-//   cursor: pointer;
-// }
+.btn {
+  /* default for <button>, but useful for <a> */
+  // @include button-reset;
+  display: inline-block;
+  text-align: center;
 
-// .btn-outline-red {
-//   border: $secondary 2px solid;
-//   // padding: 14px 28px;
-//   // font-size: 16px;
-// }
+  /* border and radius */
+  border: solid 1px $secondary;
+  border-radius: 1px;
+
+  /* size comes from text & padding (no width/height) */
+  padding: 0.5em 1em;
+
+  /* make sure colors have enough contrast! */
+  color: $secondary;
+  background-color: transparent;
+}
+
+/* inverse colors on mouse-over */
+.btn:hover {
+  color: white;
+  // border-color: currentColor;
+  background-color: $secondary;
+}
