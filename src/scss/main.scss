@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 @import 'material-color';
+@import 'mixins';
 @import 'reset';
 @import 'variables';
 @import 'buttons';
@@ -38,10 +39,7 @@ Navigation
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: auto;
-    //padding y / padding x
-    padding: 0 1.25rem;
+    @include center(1200px);
 
     .site-title img {
       padding: 0;
@@ -70,7 +68,7 @@ Navigation
 }
 
 /***********************
-home
+HOME SECTION
 ************************/
 .home-section {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.99)), url(../img/hero.jpg);
@@ -83,8 +81,7 @@ home
   color: $light;
 
   .home-inner {
-    max-width: 1200px;
-    margin: auto;
+    @include center(1200px);
     text-align: center;
     padding-top: 270px;
 
@@ -99,13 +96,15 @@ home
 }
 
 /***********************
-music
+MUSIC HEAD
 ************************/
 .music-head-section {
   background: $primary;
-  padding: 100px;
+  //padding y / padding x
+  padding: 6rem 0;
 
   .music-head-inner {
+    @include center(1200px);
     color: $light;
     text-align: center;
 
@@ -120,44 +119,89 @@ music
 }
 
 /*********************************************
-index.html - features-2up-areas
+MUSIC SECTION
 **********************************************/
-.features-2up-areas {
-  //use for outher margins or full element color
-  //background: white;
+.music-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/brickwall.jpg);
+  padding: 8rem 0 6.5rem 0;
+
+  .music-inner {
+    @include center(1200px);
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
-.features-2up-areas h3 {
-  margin: 0;
-  padding: 0;
+/***********************
+VIDEO HEAD
+************************/
+.video-head-section {
+  background: $primary;
+  //padding y / padding x
+  padding: 6rem 0;
+
+  .video-head-inner {
+    @include center(1200px);
+    color: $light;
+    text-align: center;
+
+    h2 {
+      font-size: 4.5rem;
+    }
+
+    .button {
+      margin-top: 25px;
+    }
+  }
 }
 
-.features-2up-areas-inner-wrap {
-  /* background: white; */
-  max-width: 1200px;
-  margin: auto;
-  padding: 1.25rem;
-  display: grid;
-  grid-gap: 20px;
-  grid-template-areas:
-    'img1 txt2'
-    'txt4 img3';
-}
+/*********************************************
+VIDEO SECTION
+**********************************************/
+.video-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/brickwall.jpg);
+  padding: 8rem 0 6.5rem 0;
 
-.img1 {
-  grid-area: img1;
-}
+  .video-inner {
+    @include center(1200px);
+    display: grid;
+    grid-template-areas:
+      'one one two two'
+      'three three four four';
+    grid-gap: 20px;
+  }
 
-.txt2 {
-  grid-area: txt2;
-}
+  .one {
+    grid-area: one;
+  }
 
-.img3 {
-  grid-area: img3;
-}
+  .two {
+    grid-area: two;
+  }
 
-.txt4 {
-  grid-area: txt4;
+  .three {
+    grid-area: three;
+  }
+
+  .four {
+    grid-area: four;
+  }
+
+  .video-inner > div {
+    position: relative;
+    height: 0;
+    padding-top: 56.25%;
+    overflow: hidden;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /*********************************************
