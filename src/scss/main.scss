@@ -86,7 +86,8 @@ HOME SECTION
     padding-top: 270px;
 
     h1 {
-      font-size: 4.5rem;
+      font-size: 6.5rem;
+      line-height: 1.2;
 
       strong {
         color: $secondary;
@@ -207,19 +208,52 @@ VIDEO SECTION
 /*********************************************
 footer
 **********************************************/
-footer {
+.main-footer {
   background: $dark;
-  padding: 5rem;
-  margin-top: 40px;
-}
+  color: $light;
+  //padding y / padding x
+  padding: 2rem 0;
 
-.footer-inner {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 50% auto;
-}
+  .footer-inner {
+    @include center(1200px);
+    text-align: center;
+    color: white;
 
-.footer-logo {
-  margin-right: 10px;
+    h3 {
+      font-size: 2rem;
+    }
+
+    button {
+      margin-top: 0.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    i {
+      margin: 0.2rem;
+    }
+
+    .fa-facebook-square {
+      color: $light;
+    }
+
+    .fa-youtube-square {
+      color: $light;
+    }
+
+    .fa-bandcamp {
+      color: $light;
+    }
+
+    .fa-facebook-square:hover {
+      color: #3b5998;
+    }
+
+    .fa-youtube-square:hover {
+      color: #f00;
+    }
+
+    .fa-bandcamp:hover {
+      color: #629aa9;
+    }
+  }
 }
