@@ -9,6 +9,10 @@
 /*********************************************
 Base Styles
 **********************************************/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   cursor: url('../cursor.cur'), auto;
   // font-family: 'Open Sans', sans-serif;
@@ -70,7 +74,7 @@ Navigation
 /***********************
 HOME SECTION
 ************************/
-.home-section {
+#home-section {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.99)), url(../img/hero.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -99,7 +103,7 @@ HOME SECTION
 /***********************
 MUSIC HEAD
 ************************/
-.music-head-section {
+#music-head-section {
   background: $primary;
   //padding y / padding x
   padding: 6rem 0;
@@ -137,7 +141,7 @@ MUSIC SECTION
 /***********************
 VIDEO HEAD
 ************************/
-.video-head-section {
+#video-head-section {
   background: $primary;
   //padding y / padding x
   padding: 6rem 0;
