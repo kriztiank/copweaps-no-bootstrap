@@ -9,11 +9,6 @@
 /*********************************************
 Base Styles
 **********************************************/
-:root {
-  --modal-duration: 1s;
-  --modal-color: #428bca;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -271,7 +266,7 @@ footer
 modal
 **********************************************/
 
-/* modal background */
+/* modal greyed out background */
 .modal {
   display: none;
   position: fixed;
@@ -284,27 +279,14 @@ modal
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* modal popup */
 .modal-content {
   background: white;
   margin: 10% auto;
-  padding: 20px;
-  width: 60%;
+  max-width: 50%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   animation-name: modalopen;
-  animation-duration: var(--modal-duration);
-}
-
-.close {
-  color: #ccc;
-  float: right;
-  font-size: 30px;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+  animation-duration: 1s;
 }
 
 @keyframes modalopen {
@@ -315,4 +297,36 @@ modal
   to {
     opacity: 1;
   }
+}
+
+.modal-header {
+  background: $dark;
+  padding: 15px;
+  color: #fff;
+}
+
+.modal-body {
+  padding: 10px 20px;
+  background: #fff;
+}
+
+.modal-footer {
+  background: $dark;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+/* the x */
+.close {
+  color: #fff;
+  float: right;
+  font-size: 24px;
+}
+
+.close:hover,
+.close:focus {
+  color: #ccc;
+  // text-decoration: none;
+  cursor: pointer;
 }
