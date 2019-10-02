@@ -60,6 +60,10 @@ Navigation
         margin-left: 1rem;
       }
 
+      .active {
+        color: $secondary;
+      }
+
       a {
         color: $lightgrey1;
       }
