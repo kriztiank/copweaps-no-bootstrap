@@ -7,7 +7,7 @@ Parcel with Sass, Babel and Autoprefixer.
 1. Clone this repository.
 
    ```bash
-   git clone https://github.com/kriztiank/parcel-master.git
+   git clone
    ```
 
 2. Install package.json.
