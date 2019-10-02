@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap');
 @import 'material-color';
 @import 'mixins';
 @import 'reset';
@@ -15,8 +14,7 @@ html {
 
 body {
   cursor: url('../cursor.cur'), auto;
-  // font-family: 'Open Sans', sans-serif;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
 }
 
@@ -26,13 +24,19 @@ body {
   // max-width: 100%;
 }
 
+h1,
+h2,
+p {
+  font-weight: 300;
+}
+
 /*********************************************
 Navigation
 **********************************************/
 .nav {
   background: $primary;
   border-bottom: $secondary 3px solid;
-  opacity: 0.9;
+  opacity: 1;
   //padding y / padding x
   padding: 0.5rem 0;
   position: sticky;
@@ -94,7 +98,7 @@ HOME SECTION
     padding-top: 270px;
 
     h1 {
-      font-size: 6.5rem;
+      font-size: 4.5rem;
       line-height: 1.2;
 
       strong {
