@@ -1,6 +1,5 @@
 .btn {
   /* default for <button>, but useful for <a> */
-  // @include button-reset;
   display: inline-block;
   text-align: center;
 
@@ -19,6 +18,5 @@
 /* inverse colors on mouse-over */
 .btn:hover {
   color: white;
-  // border-color: currentColor;
   background-color: $secondary;
 }

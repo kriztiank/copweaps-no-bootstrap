@@ -50,13 +50,12 @@ button {
 
 // style borders on forms elements
 input,
-textarea,
-button {
+textarea {
   border: 1px solid gray;
+  resize: none;
 }
 
 button {
-  border-radius: 0;
   padding: 0.5rem 1rem;
   background-color: transparent;
   cursor: pointer;

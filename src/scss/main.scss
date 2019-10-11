@@ -19,7 +19,7 @@ body {
 }
 
 * img {
-  display: block;
+  // display: block;
   line-height: 0;
   // max-width: 100%;
 }
@@ -269,68 +269,63 @@ footer
 /*********************************************
 modal
 **********************************************/
-
-/* modal greyed out background */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  height: 100%;
+.modal-bg {
+  background: rgba(0, 0, 0, 0.5);
   width: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-}
+  height: 100%;
+  position: fixed;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
 
-/* modal popup */
-.modal-content {
-  background: white;
-  margin: 10% auto;
-  max-width: 50%;
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-  animation-name: modalopen;
-  animation-duration: 1s;
-}
+  .modal-content {
+    height: 500px;
+    width: 400px;
+    background: white;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    border-radius: 4px;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    animation-name: modalopen;
+    animation-duration: 1s;
 
-@keyframes modalopen {
-  from {
-    opacity: 0;
+    @keyframes modalopen {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      font-size: 42px;
+      color: #333;
+      transform: rotate(45deg);
+      cursor: pointer;
+
+      &:hover {
+        color: #666;
+      }
+    }
+
+    input,
+    textarea,
+    .btn {
+      margin: 10px auto;
+      display: block;
+      width: 100%;
+      padding: 8px;
+    }
+
+    textarea {
+      height: 140px;
+    }
   }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.modal-header {
-  background: $dark;
-  padding: 15px;
-  color: #fff;
-}
-
-.modal-body {
-  padding: 10px 20px;
-  background: #fff;
-}
-
-.modal-footer {
-  background: $dark;
-  padding: 10px;
-  color: #fff;
-  text-align: center;
-}
-
-/* the x */
-.close {
-  color: #fff;
-  float: right;
-  font-size: 24px;
-}
-
-.close:hover,
-.close:focus {
-  color: #ccc;
-  // text-decoration: none;
-  cursor: pointer;
 }

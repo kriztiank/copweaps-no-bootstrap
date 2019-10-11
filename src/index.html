@@ -111,7 +111,7 @@
           Copweaps &copy;
           <span id="year"></span>
         </p>
-        <button id="modal-btn" class="btn">Contact Us</button>
+        <button id="modal_btn" class="btn">Contact Us</button>
         <p>
           <a href="https://www.facebook.com/copweaps/" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
 
@@ -123,36 +123,20 @@
     </footer>
 
     <!-- MODAL -->
-    <div id="my-modal" class="modal">
+    <div class="modal-bg">
       <div class="modal-content">
-        <div class="modal-header">
-          <span class="close">&times;</span>
-          <h2>Modal Header</h2>
-        </div>
-        <div class="modal-body">
-          <p>This is my modal</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla repellendus nisi, sunt consectetur ipsa velit repudiandae aperiam modi quisquam nihil nam asperiores doloremque mollitia dolor deleniti quibusdam nemo commodi ab.</p>
-        </div>
-        <div class="modal-footer">
-          <h3>Modal Footer</h3>
-        </div>
+        <div class="close">+</div>
+        <img src="img/modal_logo.jpg" alt="Copweaps logo" />
+
+        <form name="contact" method="POST" data-netlify="true">
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="E-Mail" />
+          <textarea type="text" placeholder="Message"></textarea>
+          <div data-netlify-recaptcha="true"></div>
+          <a href="#" class="btn">Submit</a>
+        </form>
       </div>
     </div>
-
-    <!-- <form action="">
-			<input type="text" placeholder="Name">
-			<input type="email" placeholder="E-Mail">
-			<a href="#" class="button">Submit</a>
-		</form> -->
-
-    <!-- <button class="btn btn-primary">Primary</button>
-    <button class="btn btn-secondary">Secondary</button>
-    <button class="btn btn-success">Success</button>
-    <button class="btn btn-danger">Danger</button>
-    <button class="btn btn-warning">Warning</button>
-    <button class="btn btn-info">Info</button>
-    <button class="btn btn-light">Light</button>
-    <button class="btn btn-dark">Dark</button> -->
 
     <script src="js/modal.js"></script>
     <script src="js/scrollspy.js"></script>
